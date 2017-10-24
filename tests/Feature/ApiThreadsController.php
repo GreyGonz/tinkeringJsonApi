@@ -8,6 +8,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ApiThreadsController extends TestCase
 {
+    use RefreshDatabase;
+
     /**
      * A basic test example.
      *
@@ -29,7 +31,6 @@ class ApiThreadsController extends TestCase
 
     public function testShowThreadAPI()
     {
-        $this->withoutExceptionHandling();
 
         $thread = factory(Thread::class)->create();
 
